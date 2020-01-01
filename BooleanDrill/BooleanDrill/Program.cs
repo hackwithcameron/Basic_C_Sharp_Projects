@@ -4,13 +4,12 @@ namespace BooleanDrill
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             string userInput;
             byte age;
             bool dui;
             byte tickets;
-            //bool qualified;
 
 
 
@@ -45,6 +44,7 @@ namespace BooleanDrill
 
             Console.WriteLine("Qualified?");
             Console.WriteLine((age > 15) && (dui != true) && (tickets <= 3));
+            Console.Read();
         }
     }
 }
