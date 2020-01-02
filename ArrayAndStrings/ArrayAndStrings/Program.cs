@@ -45,7 +45,7 @@ namespace ArrayAndStrings
                             index = index - 1;
                             Console.WriteLine("You picked the number " + intArray[index]);
 
-                            //Pick a number from the array
+                            //Pick a string from the list
                             while (!stop)
                             {
                                 Console.WriteLine("Lastly a string from a list, choose one more number");
@@ -57,6 +57,10 @@ namespace ArrayAndStrings
                                     index = index - 1;
                                     Console.WriteLine("You picked the number " + strList[index]);
                                     stop = true;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Lets give it one more shot, try something between 1 and 4 again");
                                 }
                             }
                         }
