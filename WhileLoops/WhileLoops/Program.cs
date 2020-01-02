@@ -44,7 +44,7 @@ namespace WhileLoops
                         guess = true;
                         break;
                     default:
-                        Console.WriteLine(num + " is not the number we are looking for.");
+                        Console.WriteLine("\n" + num + " is not the number we are looking for.");
                         Console.WriteLine("Guess a number between 1 and 10");
                         userInput = Console.ReadLine();
                         num = Convert.ToByte(userInput);
