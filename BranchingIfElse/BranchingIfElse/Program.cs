@@ -26,26 +26,26 @@ namespace BranchingIfElse
             //IF package weight is over 50 termianate program ELSE continue with questions...
             if (weight > 50)
             {
-                Console.WriteLine("Package too heavy to be shipped via Package Express.Have a good day.");
+                Console.WriteLine("Package too heavy to be shipped via Package Express. Have a good day.");
             }
             else
             {
                 //***Package width***
                 Console.WriteLine("What is the package width?");
                 userInput = Console.ReadLine();
-                //Convert userInput to ushort and save to width
+                //Convert userInput to decimal and save to width
                 width = Convert.ToDecimal(userInput);
 
                 //***Package height***
                 Console.WriteLine("What is the package height?");
                 userInput = Console.ReadLine();
-                //Convert userInput to ushort and save to width
+                //Convert userInput to decimal and save to height
                 height = Convert.ToDecimal(userInput);
 
                 //***Package length***
                 Console.WriteLine("What is the package length?");
                 userInput = Console.ReadLine();
-                //Convert userInput to ushort and save to width
+                //Convert userInput to decimal and save to length
                 length = Convert.ToDecimal(userInput);
 
 
