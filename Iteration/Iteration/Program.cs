@@ -13,25 +13,25 @@ namespace Iteration
             List<string> names = new List<string>() { "Chandler", "Monica", "Joey", "Ross", "Rachel", "Phoebe" };
             List<string> names2 = new List<string>() { "Chandler", "Monica", "Joey", "Ross", "Rachel", "Phoebe", "Chandler", "Monica", "Joey", "Ross", "Rachel", "Phoebe" };
             List<int> index = new List<int>();
-            
 
 
 
-            ////Greets user in four languages
-            //Console.WriteLine("What is your name?");
-            //userInput = Console.ReadLine();
 
-            //for (int i = 0; i < grettingArray.Length; i++)
-            //{
-            //    Console.WriteLine(grettingArray[i] + " " + char.ToUpper(userInput[0]) + userInput.Substring(1));
+            //Greets user in four languages
+            Console.WriteLine("What is your name?");
+            userInput = Console.ReadLine();
 
-            //}
+            for (int i = 0; i < grettingArray.Length; i++)
+            {
+                Console.WriteLine(grettingArray[i] + " " + char.ToUpper(userInput[0]) + userInput.Substring(1));
 
-            ////Counts to ten
-            //for (int i = 1; i <= 10; i++)
-            //{
-            //    Console.WriteLine(i);
-            //}
+            }
+
+            //Counts to ten
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine(i);
+            }
 
             //Finds index of name for user
             stop = false;
