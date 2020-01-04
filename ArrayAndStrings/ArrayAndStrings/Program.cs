@@ -30,7 +30,7 @@ namespace ArrayAndStrings
                 if (index <= strArray.Length)
                 {
                     //For index accuracy
-                    index = index - 1;
+                    index -= 1;
                     Console.WriteLine("You picked the name " + strArray[index]);
 
                     //Pick a number from the array
@@ -42,7 +42,7 @@ namespace ArrayAndStrings
 
                         if (index <= intArray.Length)
                         {
-                            index = index - 1;
+                            index -= 1;
                             Console.WriteLine("You picked the number " + intArray[index]);
 
                             //Pick a string from the list
@@ -54,8 +54,8 @@ namespace ArrayAndStrings
 
                                 if (index <= strList.Count)
                                 {
-                                    index = index - 1;
-                                    Console.WriteLine("You picked the number " + strList[index]);
+                                    index -= 1;
+                                    Console.WriteLine(strList[index]);
                                     stop = true;
                                 }
                                 else
