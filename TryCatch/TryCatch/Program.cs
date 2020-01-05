@@ -22,11 +22,9 @@ namespace TryCatch
                     Console.WriteLine("Please enter a number to be divided by ");
                     foreach (int num in nums)
                     {
-                        string comma = ", ";
-                        Console.Write(num + comma);
+                        Console.Write(num + ", ");
                         if (nums.IndexOf(num) == nums.Count - 1)
                         {
-                            comma.TrimEnd(',', ' ');
                             Console.Write("\n>>>  ");
                         }
                     }
