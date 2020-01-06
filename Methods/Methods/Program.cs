@@ -11,8 +11,9 @@ namespace Methods
             decimal answer;
             decimal answer2;
             decimal answer3;
-            
 
+
+            Console.WriteLine("Welcome to my tip Calculator");
             Console.WriteLine("Enter bill total:");
             userNum = Convert.ToDecimal(Console.ReadLine());
             answer = math.MathOne(userNum);
