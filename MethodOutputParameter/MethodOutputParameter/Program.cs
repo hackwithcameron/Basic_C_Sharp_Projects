@@ -19,7 +19,7 @@ namespace MethodOutputParameter
 
             
             DivideTwo.Divide(out userNum1, out userNum2, out answer);
-            Console.WriteLine(userNum + " Divided by " + userNum2 + " = " + answer);
+            Console.WriteLine(userNum1 + " Divided by " + userNum2 + " = " + answer);
         }
     }
 }
