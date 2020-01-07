@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AbstractClass
 {
@@ -8,6 +9,7 @@ namespace AbstractClass
         {
             Employee employee = new Employee() { FirstName = "Sample", LastName = "Student" };
             employee.SayName();
+            employee.Quit();
         }
     }
 }
