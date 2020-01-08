@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace AbstractClass
 {
-    public class Employee : Person, IQuittable
+    public class Employee<T> : Person, IQuittable
     {
+
         public int ID { get; set; }
+        public List<T> Things { get; set; }
 
         public override void SayName()
         {
@@ -14,22 +18,24 @@ namespace AbstractClass
             Console.WriteLine("Employee Quits");
         }
 
-        public static bool operator ==(Employee emp1, Employee emp2)
-        {
-            if (emp1.ID == emp2.ID)
-            {
-                return true;
-            }
-            return false;
-        }
+        
 
-        public static bool operator !=(Employee emp1, Employee emp2)
-        {
-            if (emp1.ID == emp2.ID)
-            {
-                return true;
-            }
-            return false;
-        }
+        //public static bool operator ==(Employee emp1, Employee emp2)
+        //{
+        //    if (emp1.ID == emp2.ID)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
+
+        //public static bool operator !=(Employee emp1, Employee emp2)
+        //{
+        //    if (emp1.ID == emp2.ID)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
     }
 }
