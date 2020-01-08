@@ -7,9 +7,14 @@ namespace AbstractClass
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee() { FirstName = "Sample", LastName = "Student" };
-            employee.SayName();
-            employee.Quit();
+            bool areEqual;
+            Employee employee = new Employee() { FirstName = "Sample", LastName = "Student", ID = 1 };
+            Employee employee2 = new Employee() { FirstName = "Sample", LastName = "Student", ID = 1 };
+
+            areEqual = employee == employee2;
+            Console.WriteLine(areEqual);
+
+ 
         }
     }
 }
