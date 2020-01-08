@@ -18,9 +18,9 @@ namespace AbstractClass
         {
             if (emp1.ID == emp2.ID)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
         public static bool operator !=(Employee emp1, Employee emp2)

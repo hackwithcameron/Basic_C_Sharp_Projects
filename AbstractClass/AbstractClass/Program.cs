@@ -9,7 +9,7 @@ namespace AbstractClass
         {
             bool areEqual;
             Employee employee = new Employee() { FirstName = "Sample", LastName = "Student", ID = 1 };
-            Employee employee2 = new Employee() { FirstName = "Sample", LastName = "Student", ID = 1 };
+            Employee employee2 = new Employee() { FirstName = "Sample", LastName = "Student", ID = 2 };
 
             areEqual = employee == employee2;
             Console.WriteLine(areEqual);
