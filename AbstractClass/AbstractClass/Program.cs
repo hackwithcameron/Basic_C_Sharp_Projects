@@ -37,6 +37,7 @@ namespace AbstractClass
             }
 
 
+            //********* Compairs Employees using IDs *********
 
             //bool areEqual;
             //Employee employee = new Employee() { FirstName = "Sample", LastName = "Student", ID = 1 };

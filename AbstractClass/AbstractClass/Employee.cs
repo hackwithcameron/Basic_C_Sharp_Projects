@@ -18,7 +18,9 @@ namespace AbstractClass
             Console.WriteLine("Employee Quits");
         }
 
-        
+
+
+        //********* Compairs Employees using IDs *********
 
         //public static bool operator ==(Employee emp1, Employee emp2)
         //{
