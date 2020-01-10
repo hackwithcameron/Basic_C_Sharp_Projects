@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AbstractClass
 {
@@ -7,46 +8,77 @@ namespace AbstractClass
     {
         static void Main(string[] args)
         {
-            Employee<string> employeeStuff = new Employee<string>();
-            employeeStuff.Things = new List<string>();
-            employeeStuff.Things.Add("Speakers");
-            employeeStuff.Things.Add("Cell Phone");
-            employeeStuff.Things.Add("T.V.");
-            employeeStuff.Things.Add("Coffee Cup");
-            employeeStuff.Things.Add("Computer");
+            List<Employee> employees = new List<Employee>();
+            List<Employee> joes = new List<Employee>();
 
-
-
-            Employee<int> employeeNums = new Employee<int>();
-            employeeNums.Things = new List<int>();
-            employeeNums.Things.Add(5);
-            employeeNums.Things.Add(17);
-            employeeNums.Things.Add(28);
-            employeeNums.Things.Add(34);
-            employeeNums.Things.Add(56);
-
-
-            foreach (string thing in employeeStuff.Things)
+            employees.Add(new Employee()
             {
-                Console.WriteLine(thing);
+                FirstName = "Joe", LastName = "Robert", ID = 1
+            });
+            employees.Add(new Employee()
+            {
+                FirstName = "Carls", LastName = "Jr", ID = 2
+            });
+            employees.Add(new Employee()
+            {
+                FirstName = "John", LastName = "Smith", ID = 3
+            });
+            employees.Add(new Employee()
+            {
+                FirstName = "Joey", LastName = "Tribbiani", ID = 4
+            });
+            employees.Add(new Employee()
+            {
+                FirstName = "Rachel", LastName = "Green", ID = 5
+            });
+            employees.Add(new Employee()
+            {
+                FirstName = "Joe", LastName = "Lewis", ID = 6
+            });
+            employees.Add(new Employee()
+            {
+                FirstName = "Ross", LastName = "Geller", ID = 7
+            });
+            employees.Add(new Employee()
+            {
+                FirstName = "Pheobe", LastName = "Buffay", ID = 8
+            });
+            employees.Add(new Employee()
+            {
+                FirstName = "Chandler", LastName = "Bing", ID = 9
+            });
+            employees.Add(new Employee()
+            {
+                FirstName = "Monica", LastName = "Geller", ID = 10
+            });
+
+            foreach (Employee employee in employees)
+            {
+                if (employee.FirstName == "Joe")
+                {
+                    joes.Add(employee);
+                }
             }
 
-            foreach (int num in employeeNums.Things)
+            foreach (Employee joe in joes)
             {
-                Console.WriteLine(num);
+                Console.WriteLine("{0} {1}",joe.FirstName.ToString(), joe.LastName.ToString());
             }
 
+            //Using Lambda Function
+            List<Employee> joes2 = employees.Where(x => x.FirstName == "Joe").ToList();
+            List<Employee> ids = employees.Where(x => x.ID > 5).ToList();
 
-            //********* Compairs Employees using IDs *********
-
-            //bool areEqual;
-            //Employee employee = new Employee() { FirstName = "Sample", LastName = "Student", ID = 1 };
-            //Employee employee2 = new Employee() { FirstName = "Sample", LastName = "Student", ID = 2 };
-
-            //areEqual = employee == employee2;
-            //Console.WriteLine(areEqual);
-
-
+            Console.WriteLine("\nUsing Lambda Function:");
+            foreach (Employee joe in joes2)
+            {
+                Console.WriteLine("{0} {1}", joe.FirstName.ToString(), joe.LastName.ToString());
+            }
+            Console.WriteLine("\n");
+            foreach (Employee employee in ids)
+            {
+                Console.WriteLine("{0} {1} ID: {2}", employee.FirstName.ToString(), employee.LastName.ToString(), employee.ID.ToString());
+            }
         }
     }
 }
